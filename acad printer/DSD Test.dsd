@@ -1,0 +1,137 @@
+[DWF6Version]
+Ver=1
+[DWF6MinorVersion]
+MinorVer=1
+[DWF6Sheet:101 AHU-2-NA-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\101 AHU-2-NA.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\101 AHU-2-NA.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:000 RiserE-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\000 RiserE.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\000 RiserE.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:000 RiserF-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\000 RiserF.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\000 RiserF.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:000 Riser-K00-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\000 Riser-K00.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\000 Riser-K00.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:001 Panel Drawing-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\001 Panel Drawing.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\001 Panel Drawing.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:001 Panel DrawingA-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\001 Panel DrawingA.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\001 Panel DrawingA.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:001 Panel DrawingB-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\001 Panel DrawingB.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\001 Panel DrawingB.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:100 AHU-B-1-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:100 AHU-B-1A-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1A.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1A.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:100 AHU-B-1B-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1B.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1B.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:100 AHU-B-1-K00-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1-K00.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1-K00.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:100 AHU-B-1-K01-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1-K01.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\100 AHU-B-1-K01.dwg
+Has Plot Port=0
+Has3DDWF=0
+[DWF6Sheet:101 AHU-2-N-Model]
+DWG=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\101 AHU-2-N.dwg
+Layout=Model
+Setup=JVDefaultPublish|C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\DefaultPublishSettings.dwg
+OriginalSheetPath=D:\Jobs\255709_BAU_AUS_WPC_replacement_AHU_units\MDT\101 AHU-2-N.dwg
+Has Plot Port=0
+Has3DDWF=0
+[Target]
+Type=5
+DWF=D:\Documents\DT Prints\Drawing1.pdf
+OUT=D:\Documents\DT Prints\
+PWD=
+[MRU Local]
+MRU=1
+File0=D:\Documents\DT Prints\
+[MRU Sheet List]
+MRU=0
+[PdfOptions]
+IncludeHyperlinks=TRUE
+CreateBookmarks=TRUE
+CaptureFontsInDrawing=TRUE
+ConvertTextToGeometry=FALSE
+VectorResolution=1200
+RasterResolution=400
+[AutoCAD Block Data]
+IncludeBlockInfo=0
+BlockTmplFilePath=
+[SheetSet Properties]
+IsSheetSet=FALSE
+IsHomogeneous=FALSE
+SheetSet Name=
+NoOfCopies=1
+PlotStampOn=FALSE
+ViewFile=FALSE
+JobID=0
+SelectionSetName=
+AcadProfile=AutoCAD
+CategoryName=
+LogFilePath=
+IncludeLayer=TRUE
+LineMerge=FALSE
+CurrentPrecision=
+PromptForDwfName=TRUE
+PwdProtectPublishedDWF=FALSE
+PromptForPwd=FALSE
+RepublishingMarkups=FALSE
+PublishSheetSetMetadata=FALSE
+PublishSheetMetadata=FALSE
+3DDWFOptions=0 1

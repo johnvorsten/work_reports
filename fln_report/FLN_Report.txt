@@ -1,0 +1,1008 @@
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+Job Site:      Insight Job
+    Language:      English (United States)
+    Event Logging: 30 Days
+    First weekday: Monday
+    Sync Time:     00:00
+    Configuration: Local
+ 
+BLN:           BLDG_25
+    Descriptor:         
+    Network Type:       BACnet
+ 
+    Insight:       MD1J09PC
+        Descriptor:         
+        Address:            410000
+        Connection:         Direct
+        Alarm Bell:         Disabled
+        Graphics Blinking:  Disabled
+        Event Printer:      No
+        Fire Control:       No
+ 
+    Field Panel:   CO0514AANODE21
+        Descriptor:         EXHAUST FAN CTLR
+        Device Instance:    252100
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.4 BACnet 4.3g
+        Revision Level:     3.4
+        ID_STRING:          170907D37942PXC100-E96.A
+        Local Printer:      No
+        Logical Points:     297
+ 
+        FLN:           3
+            Descriptor:         FLN
+ 
+            FLN Device:    CO0514_EF2412A_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252109
+ 
+            FLN Device:    CO0514_EF2412B_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252110
+ 
+
+
+
+
+
+
+                                     - 1 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_EF1201A_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252101
+ 
+            FLN Device:    CO0514_EF1201B_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252102
+ 
+            FLN Device:    CO0514_EF2401A_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252103
+ 
+            FLN Device:    CO0514_EF2401B_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252104
+ 
+            FLN Device:    CO0514_EF2401C_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252105
+ 
+            FLN Device:    CO0514_EF2402A_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252106
+ 
+            FLN Device:    CO0514_EF2402B_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252107
+ 
+            FLN Device:    CO0514_EF2402C_VFD
+                Device Type:        BACnet Fln Device
+                Application:        65535 - Undefined or failed BACnet FLN Device
+                Drop:               252108
+ 
+
+
+
+
+
+
+
+
+
+
+
+                                     - 2 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+    Field Panel:   CO0514AANODE27
+        Descriptor:         
+        Device Instance:    252700
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          170906D10260PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     9
+ 
+        FLN:           1
+            Descriptor:         
+ 
+            FLN Device:    CO0514_AC_AirComp
+                Device Type:        BACnet Fln Device
+                Application:        11203 - Evoqua AWN BB2
+                Drop:               252701
+ 
+    Field Panel:   CO0514AANODE26
+        Descriptor:         ACID WASTE / DI NEUTRALIZER
+        Device Instance:    252600
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          170907D10281PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     4
+ 
+        FLN:           1
+            Descriptor:         FLN
+ 
+            FLN Device:    CO0514_ACID_AcidNeut
+                Device Type:        BACnet Fln Device
+                Application:        11203 - Evoqua AWN BB2
+                Drop:               252602
+ 
+            FLN Device:    CO0514_RODI_RODIWater
+                Device Type:        BACnet Fln Device
+                Application:        11202 - 11202
+                Drop:               252601
+ 
+
+
+
+
+
+
+                                     - 3 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+    Field Panel:   CO0514AANODE20
+        Descriptor:         
+        Device Instance:    252000
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          170907D10283PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     726
+ 
+        FLN:           1
+            Descriptor:         
+ 
+            FLN Device:    CO0514_EPA_PhoenixJACE03
+                Device Type:        BACnet Fln Device
+                Application:        0 - 0
+                Drop:               252001
+ 
+        FLN:           2
+            Descriptor:         
+ 
+            FLN Device:    CO0514_EPA_PhoenixJACE04
+                Device Type:        BACnet Fln Device
+                Application:        0 - 0
+                Drop:               252002
+ 
+    Field Panel:   CO0514AANODE22
+        Descriptor:         RMIS AND RPMS
+        Device Instance:    252200
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          170906D10259PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     658
+ 
+
+
+
+
+
+
+
+
+
+
+
+                                     - 4 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+    Field Panel:   CO0514AANODE23
+        Descriptor:         
+        Device Instance:    252300
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          180110D11277PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     256
+ 
+    Field Panel:   CO0514AANODE24
+        Descriptor:         
+        Device Instance:    252400
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          180110D11267PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     517
+ 
+    Field Panel:   CO0514AANODE25
+        Descriptor:         PHOENIX VALVES RMIS RPMS
+        Device Instance:    252500
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          170726D9962PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     682
+ 
+    Field Panel:   CO0514AANODE12
+        Descriptor:         
+        Device Instance:    251200
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        Local Printer:      No
+        Logical Points:     500
+ 
+
+
+
+
+                                     - 5 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+    Field Panel:   CO0514AANODE28
+        Descriptor:         PHASE II MSTP
+        Device Instance:    252800
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          180615D44328PXC100-E96.A
+        Local Printer:      No
+        Logical Points:     261
+ 
+        FLN:           1
+            Descriptor:         FLN
+ 
+            FLN Device:    CO0514_FCU4_1C120
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252804
+ 
+            FLN Device:    CO0514_FCU2_1C630
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252805
+ 
+            FLN Device:    CO0514_FCU3_1C095
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252807
+ 
+            FLN Device:    CO0514_FCU2_1C005
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252808
+ 
+            FLN Device:    CO0514_FCU1_1C620
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252806
+ 
+            FLN Device:    CO0514_RPM_C060A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252801
+ 
+
+
+
+
+
+
+                                     - 6 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_RPM_C090
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252802
+ 
+            FLN Device:    CO0514_RPM_C120
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252803
+ 
+            FLN Device:    CO0514_RPM_C210
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252809
+ 
+            FLN Device:    CO0514_RPM_C630
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252810
+ 
+            FLN Device:    CO0514_RPM_C115
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252811
+ 
+            FLN Device:    CO0514_RPM_C095
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252812
+ 
+            FLN Device:    CO0514_RPM_C085
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252813
+ 
+            FLN Device:    CO0514_RPM_C060B
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252814
+ 
+            FLN Device:    CO0514_RPM_C130
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252815
+ 
+
+
+
+
+
+
+                                     - 7 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_RPM_C065
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252816
+ 
+            FLN Device:    CO0514_RPM_C045
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252817
+ 
+            FLN Device:    CO0514_RPM_C005
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252818
+ 
+            FLN Device:    CO0514_RPM_C610
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252819
+ 
+            FLN Device:    CO0514_RPM_C305
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252820
+ 
+            FLN Device:    CO0514_RPM_D520
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252823
+ 
+            FLN Device:    CO0514_BCU_1453
+                Device Type:        BACnet Fln Device
+                Application:        12044 - 12044
+                Drop:               252822
+ 
+            FLN Device:    CO0514_RPM_C145C
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252821
+ 
+        FLN:           2
+            Descriptor:         ALN
+ 
+            FLN Device:    CO0514_FCU7_1C420A
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252846
+ 
+
+
+
+                                     - 8 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_FCU7_1C420B
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252847
+ 
+            FLN Device:    CO0514_FCU1_1C320
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252857
+ 
+            FLN Device:    CO0514_FCU1_1C340
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252858
+ 
+            FLN Device:    CO0514_FCU7_1C160
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252835
+ 
+            FLN Device:    CO0514_RPM_C150A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252831
+ 
+            FLN Device:    CO0514_RPM_C150
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252832
+ 
+            FLN Device:    CO0514_RPM_C160A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252833
+ 
+            FLN Device:    CO0514_RPM_C170
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252836
+ 
+            FLN Device:    CO0514_RPM_C160
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252837
+ 
+
+
+
+
+
+
+                                     - 9 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_RPM_C520A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252838
+ 
+            FLN Device:    CO0514_RPM_C520
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252840
+ 
+            FLN Device:    CO0514_RPM_C535
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252841
+ 
+            FLN Device:    CO0514_RPM_C540
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252842
+ 
+            FLN Device:    CO0514_RPM_C425B
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252843
+ 
+            FLN Device:    CO0514_RPM_C425
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252844
+ 
+            FLN Device:    CO0514_RPM_C420A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252845
+ 
+            FLN Device:    CO0514_RPM_C420B
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252848
+ 
+            FLN Device:    CO0514_RPM_C360A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252849
+ 
+
+
+
+
+
+
+                                     - 10 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_RPM_C355
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252850
+ 
+            FLN Device:    CO0514_RPM_C360B
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252851
+ 
+            FLN Device:    CO0514_RPM_C365
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252852
+ 
+            FLN Device:    CO0514_RPM_C340
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252853
+ 
+            FLN Device:    CO0514_RPM_C325
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252854
+ 
+            FLN Device:    CO0514_RPM_C320A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252855
+ 
+            FLN Device:    CO0514_RPM_C320B
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252856
+ 
+            FLN Device:    CO0514_FCU7_1C150
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252834
+ 
+            FLN Device:    CO0514_FCU7_1C520
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252839
+ 
+
+
+
+
+
+
+                                     - 11 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_FCU5_1C340
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252858
+ 
+    Field Panel:   CO0514AANODE29
+        Descriptor:         
+        Device Instance:    252900
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        ID_STRING:          180320D11889PXC00-E96.A
+        Local Printer:      No
+        Logical Points:     107
+ 
+        FLN:           1
+            Descriptor:         FLN
+ 
+            FLN Device:    CO0514_FCU1_1A246
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252905
+ 
+            FLN Device:    CO0514_FCU1_1A254
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252907
+ 
+            FLN Device:    CO0514_FCU4_1A256
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252909
+ 
+            FLN Device:    CO0514_RPM_A220
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252901
+ 
+            FLN Device:    CO0514_RPM_A110
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252902
+ 
+
+
+
+
+
+
+                                     - 12 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_RPM_A120
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252903
+ 
+            FLN Device:    CO0514_RPM_A235
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252904
+ 
+            FLN Device:    CO0514_RPM_A250
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252906
+ 
+            FLN Device:    CO0514_RPM_A245
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252908
+ 
+            FLN Device:    CO0514_PPM_A120
+                Device Type:        BACnet Fln Device
+                Application:        10004 - 10004
+                Drop:               252910
+ 
+            FLN Device:    CO0514_FCU4_1A220
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252911
+ 
+        FLN:           2
+            Descriptor:         ALN
+ 
+            FLN Device:    CO0514_FCU1_1A270
+                Device Type:        BACnet Fln Device
+                Application:        6644 - Siemens BACnet F
+                Drop:               252936
+ 
+            FLN Device:    CO0514_RPM_A255A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252931
+ 
+            FLN Device:    CO0514_RPM_A255
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252932
+ 
+
+
+
+                                     - 13 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_RPM_A260
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252933
+ 
+            FLN Device:    CO0514_RPM_A270
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252934
+ 
+            FLN Device:    CO0514_RPM_A265
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252935
+ 
+            FLN Device:    CO0514_ATU1_01
+                Device Type:        BACnet Fln Device
+                Application:        6623 - Siemens BACnet V
+                Drop:               252937
+ 
+            FLN Device:    CO0514_RPM_A340
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252938
+ 
+            FLN Device:    CO0514_RPM_C225A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252939
+ 
+            FLN Device:    CO0514_RPM_C466A
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252940
+ 
+            FLN Device:    CO0514_RPM_C225B
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252941
+ 
+            FLN Device:    CO0514_RPM_C245
+                Device Type:        BACnet Fln Device
+                Application:        10200 - 10200
+                Drop:               252942
+ 
+
+
+
+
+
+
+                                     - 14 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+    Field Panel:   CO0514AANODE13
+        Descriptor:         
+        Device Instance:    251300
+        Vendor Name:        Siemens Industry Inc., Bldg Tech
+        Model Name:         Siemens BACnet Field Panel
+        Panel Type:         MODULAR
+        Firmware Revision:  PXME V3.5 BACnet 4.3g
+        Revision Level:     3.5
+        Local Printer:      No
+        Logical Points:     280
+ 
+        FLN:           1
+            Descriptor:         FLN 1
+ 
+            FLN Device:    CO0514_A1201_FPVAV01
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2367 - VAV w/CO2 Monitoring - Par Fan Pwrd w/HW Reheat
+                Drop:               15
+ 
+            FLN Device:    CO0514_A1201_VAV01
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2023 - VAV with Hot Water Reheat
+                Drop:               1
+ 
+            FLN Device:    CO0514_A1201_VAV02
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2023 - VAV with Hot Water Reheat
+                Drop:               2
+ 
+            FLN Device:    CO0514_A1201_VAV03
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2023 - VAV with Hot Water Reheat
+                Drop:               3
+ 
+            FLN Device:    CO0514_A1201_VAV04
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2023 - VAV with Hot Water Reheat
+                Drop:               4
+ 
+
+
+
+
+
+
+
+                                     - 15 -
+
+
+
+
+
+
+9/30/2019                          Insight Job                          12:09 PM
+                   System Profile Report ( Temporary Report ) 
+ 
+Selection:  *
+________________________________________________________________________________
+            FLN Device:    CO0514_A1201_VAV05
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2023 - VAV with Hot Water Reheat
+                Drop:               5
+ 
+            FLN Device:    CO0514_A1201_VAV06
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2023 - VAV with Hot Water Reheat
+                Drop:               6
+ 
+            FLN Device:    CO0514_A1201_VAV07
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2023 - VAV with Hot Water Reheat
+                Drop:               7
+ 
+            FLN Device:    CO0514_A1201_VAV13
+                Device Type:        TEC
+                Secure Mode:        Unknown
+                Application:        2020 - VAV Cooling Only
+                Drop:               13
+ 
+BLN:           JACE_NET
+    Descriptor:         
+    Network Type:       BACnet
+ 
+    Insight:       MD1J09PC
+        Descriptor:         
+        Address:            410000
+        Connection:         Direct
+        Alarm Bell:         Disabled
+        Graphics Blinking:  Disabled
+        Event Printer:      No
+        Fire Control:       No
+ 
+******************************** End of Report *********************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                     - 16 -
+
+
+

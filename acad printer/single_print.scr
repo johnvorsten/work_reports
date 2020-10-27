@@ -1,0 +1,42 @@
+; semicolons are considered comments
+; Note: On Windows, when using the -PLOT command to automate multiple plot jobs
+; set the BACKGROUNDPLOT system variable to 0 before running the script.
+BACKGROUNDPLOT
+0
+-PLOT
+; sets whether you want to specify basic settigns before printing the drawingand changing more advanced settings
+Yes
+; Layout name
+Model
+; Name of output device. Alternate is DWG to PDF.pc3
+PDF-XChange Standard
+; Paper size, must be exactly as specified by the driver
+Tabloid/ANSI B
+; Paper units, default to inches
+Inches
+; Drawing orientation. Alternate is Landscape
+Portrait
+; Plot up-side-down?
+No
+; Plot area; Options are display, extents, limits, layout, view, window
+Extents
+; Plot scale. specifies plot scale for output. "Fit" calculates scale to fit the area on the sheet of paper
+Fit
+; Plot offset. Options are X,Y and Center. See what works best..
+Center
+; Plot with plot styles? Plot with style you specify
+Yes
+; Location of custom plot style. Plot style table name
+C:\Users\z003vrzk\.spyder-py3\Scripts\Work\acad printer\custom_printing_dt.ctb
+; plot with lineweights
+Yes
+; Shade plot settings. 
+As displayed
+; Write plot to a file? No because PDF-XChange already takes care of that
+N
+; Save changes to a page setup? Or set shade plot quality? No
+N
+; prorceed with plot? Yes...
+Y
+QUIT
+Y

@@ -1,0 +1,38 @@
+USE [JobDB] /* Must match attached database name */
+GO
+
+/****** Object:  Table [dbo].[NETDEV]    Script Date: 10/1/2020 9:44:17 AM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+/* Update existing table to add columns expected by DT 6.1
+Why did the tool not auto-update this table? */
+ALTER TABLE [dbo].[NETDEV]
+ADD [USERNAME] [nvarchar](30) NULL,
+	[MAINDEVICE] [nvarchar](30) NULL,
+	[BACKUPDEVICE] [nvarchar](30) NULL,
+	[RPTPRINTER] [nvarchar](30) NULL,
+	[ALMPRINTER1] [nvarchar](30) NULL,
+	[ALMPRINTER2] [nvarchar](30) NULL,
+	[ALMPRINTER3] [nvarchar](30) NULL,
+	[HOSTCALLER] [nvarchar](30) NULL,
+	[CLOCKFREQUENCY] [smallint] NULL,
+	[INTERSITE_EPING_PERIOD] [int] NULL,
+	[INTERSITE_EPING_TIMEOUT] [int] NULL,
+	[INTRASITE_EPING_PERIOD] [int] NULL,
+	[INTRASITE_EPING_TIMEOUT] [int] NULL,
+	[INTERSITE_NOTIFICATION_PERIOD] [int] NULL,
+	[INTERSITE_POLLING_PERIOD] [int] NULL,
+	[INTERSITE_CYCLE_TIMEOUT] [int] NULL,
+	[INTRASITE_NOTIFICATION_PERIOD] [int] NULL,
+	[INTRASITE_POLLING_PERIOD] [int] NULL,
+	[INTRASITE_CYCLE_TIMEOUT] [int] NULL,
+	[HOLDBACK_DELAY] [int] NULL,
+	[TOMBSTONE_LIFETIME] [int] NULL;
+GO
+
+ALTER TABLE [dbo].[NETDEV] ADD  DEFAULT ((60)) FOR [CLOCKFREQUENCY]
+GO
