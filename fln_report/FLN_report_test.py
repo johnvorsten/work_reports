@@ -7,6 +7,8 @@ Created on Tue Jan 21 09:15:43 2020
 # Python Imports
 import os
 import subprocess
+import tkinter as tk
+from tkinter import filedialog
 
 # Local imports
 from FLN_report import create_bln_dict, bln_dict_to_df
@@ -15,10 +17,10 @@ from FLN_report import create_bln_dict, bln_dict_to_df
 
 if __name__ == '__main__':
     # Get system profile report from user
-    input_msg = """Please enter in path to system profile report
-    Format like : path\\to\\direcory
-    Input : """
-    file_path = str(input(input_msg))
+    root = tk.Tk()
+    root.withdraw()
+    file_path = filedialog.askopenfilename()
+    file_path = os.path.normpath(file_path)
 
     # Create dictionary of BLN profile
     bln_dict = create_bln_dict(file_path)
