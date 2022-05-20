@@ -2,7 +2,7 @@
 """
 Created on Tue Jan 21 09:15:43 2020
 
-@author: z003vrzk
+@author: john vorsten
 """
 # Python Imports
 import os
@@ -11,11 +11,12 @@ import tkinter as tk
 from tkinter import filedialog
 
 # Local imports
-from FLN_report import create_bln_dict, bln_dict_to_df
+from text_parsing.fln_report import create_bln_dict, bln_dict_to_df
 
+# Declarations
 
+def main():
 
-if __name__ == '__main__':
     # Get system profile report from user
     root = tk.Tk()
     root.withdraw()
@@ -32,4 +33,9 @@ if __name__ == '__main__':
     save_path = os.path.join(os.getcwd(), 'FLN_Schedule_output.csv')
     fln_dataframe.to_csv(save_path, index=False)
 
-    subprocess.run('start EXCEL.exe "%s"' %save_path, shell=True)
+    subprocess.run('start EXCEL.exe "%s"' % save_path, shell=True)
+
+    return None
+
+if __name__ == '__main__':
+    main()
