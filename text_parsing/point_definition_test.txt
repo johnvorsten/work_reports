@@ -1,0 +1,346 @@
+
+
+
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+ 
+Point System Name:       B01.4307.FR7.STAEFA.COMFAIL
+Point Name:              B01.4307.FR7.STAEFA.COMFAIL
+Point Type:              LDO            
+Supervised:              No
+Revision Number:         12
+Classification:          Building Automation      
+Descriptor:              CRITALM COMFAIL
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           -Virtual-
+Text Table:              NORMAL_ALARM
+                         0 - NORMAL 
+                         1 - ALARM 
+Initial Value:           NORMAL
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        Yes
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Enhanced Alarms
+Alarm Count 2:           No
+Normal ack Enabled:      Yes
+Print Info with Alarm:   Yes            Print Alarms on BLN:Yes
+Mode Point:              B03.4331a.MBC01.MODE
+Mode Delay (min.):       0
+Default Destination 1:   1 (SUPERVISOR)
+Default Destination 2:   2 (PATIENT CARE MAIN)
+Default Destination 3:   <Undefined>
+Default Destination 4:   <Undefined>
+Alarm Mode:              Night Mode (0)
+ 
+Offset     Alarm Priority    Extra Destination          Message
+N/A               2          <Undefined>                  19
+ 
+Alarm Mode:              Day Mode (1)
+ 
+Offset     Alarm Priority    Extra Destination          Message
+N/A               2          <Undefined>                  19
+ 
+ 
+********************************************************************************
+
+
+
+
+
+
+
+
+
+                                     - 1 -
+
+
+
+
+
+
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+ 
+Point System Name:       B01.4307.RF5.STAEFA.COMFAIL
+Point Name:              B01.4307.RF5.STAEFA.COMFAIL
+Point Type:              LDO            
+Supervised:              No
+Revision Number:         11
+Classification:          Building Automation      
+Descriptor:              CRITALM COMFAIL
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           -Virtual-
+Text Table:              NORMAL_ALARM
+                         0 - NORMAL 
+                         1 - ALARM 
+Initial Value:           NORMAL
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        Yes
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Enhanced Alarms
+Alarm Count 2:           No
+Normal ack Enabled:      Yes
+Print Info with Alarm:   Yes            Print Alarms on BLN:Yes
+Mode Point:              B03.4331a.MBC01.MODE
+Mode Delay (min.):       0
+Default Destination 1:   1 (SUPERVISOR)
+Default Destination 2:   2 (PATIENT CARE MAIN)
+Default Destination 3:   <Undefined>
+Default Destination 4:   <Undefined>
+Alarm Mode:              Night Mode (0)
+ 
+Offset     Alarm Priority    Extra Destination          Message
+N/A               2          <Undefined>                  19
+ 
+Alarm Mode:              Day Mode (1)
+ 
+Offset     Alarm Priority    Extra Destination          Message
+N/A               2          <Undefined>                  19
+ 
+ 
+********************************************************************************
+
+
+
+
+
+
+
+
+
+                                     - 2 -
+
+
+
+
+
+
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+ 
+Point System Name:       B01.4325.RF6.STAEFA.COMFAIL
+Point Name:              B01.4325.RF6.STAEFA.COMFAIL
+Point Type:              LDO            
+Supervised:              No
+Revision Number:         6
+Classification:          Building Automation      
+Descriptor:              CRITALM COMFAIL
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           -Virtual-
+Text Table:              NORMAL_ALARM
+                         0 - NORMAL 
+                         1 - ALARM 
+Initial Value:           NORMAL
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        Yes
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Enhanced Alarms
+Alarm Count 2:           No
+Normal ack Enabled:      Yes
+Print Info with Alarm:   Yes            Print Alarms on BLN:Yes
+Mode Point:              B03.4331a.MBC01.MODE
+Mode Delay (min.):       0
+Default Destination 1:   1 (SUPERVISOR)
+Default Destination 2:   2 (PATIENT CARE MAIN)
+Default Destination 3:   <Undefined>
+Default Destination 4:   <Undefined>
+Alarm Mode:              Night Mode (0)
+ 
+Offset     Alarm Priority    Extra Destination          Message
+N/A               2          <Undefined>                  19
+ 
+Alarm Mode:              Day Mode (1)
+ 
+Offset     Alarm Priority    Extra Destination          Message
+N/A               2          <Undefined>                  19
+ 
+ 
+********************************************************************************
+
+
+
+
+
+
+
+
+
+                                     - 3 -
+
+
+
+
+
+
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+ 
+Point System Name:       B01.4357.AHE1.DDC01.ADD
+Point Name:              B01.4357.AHE1.DDC01.ADD
+Point Type:              LAO            
+Supervised:              No
+Revision Number:         3
+Classification:          Building Automation      
+Descriptor:              
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           FLN:  3   Drop:  06  Point:  01
+Slope:                   1.0            Intercept:          0.0
+COV Limit:               1.0            
+Engineering Units:       
+Analog Representation:   Float
+# of decimal places:     2
+Initial Value:           1038.0
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
+ 
+********************************************************************************
+ 
+Point System Name:       B01.4357.AHE1.DDC01.APP
+Point Name:              B01.4357.AHE1.DDC01.APP
+Point Type:              LAO            
+Supervised:              No
+Revision Number:         3
+Classification:          Building Automation      
+Descriptor:              
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           FLN:  3   Drop:  06  Point:  02
+Slope:                   1.0            Intercept:          0.0
+COV Limit:               1.0            
+Engineering Units:       
+Analog Representation:   Float
+# of decimal places:     2
+Initial Value:           6095.0
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
+ 
+********************************************************************************
+
+
+                                     - 4 -
+
+
+
+
+
+
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+ 
+Point System Name:       B01.4357.AHE1.DDC01.COMF
+Point Name:              B01.4357.AHE1.DDC01.COMF
+Point Type:              LDI            
+Supervised:              No
+Revision Number:         2
+Classification:          Building Automation      
+Descriptor:              
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           FLN:  3   Drop:  06  Point:  99  Normally Closed:  No
+Text Table:              Default LDI
+                         0 - OFF 
+                         1 - ON 
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
+ 
+********************************************************************************
+ 
+Point System Name:       B01.4383.FH23
+Point Name:              B01.4383.FH23
+Point Type:              LDI            
+Supervised:              No
+Revision Number:         8
+Classification:          Building Automation      
+Descriptor:              FUME HOOD 23
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           -Virtual-
+Text Table:              NORMAL_ALARM
+                         0 - NORMAL 
+                         1 - ALARM 
+Initial Value:           NORMAL
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
+ 
+********************************************************************************
+
+
+
+
+
+
+
+                                     - 5 -
+
+
+
+
+
+
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+ 
+Point System Name:       B01.4384.RT
+Point Name:              B01.4384.RT
+Point Type:              LAI            
+Supervised:              No
+Revision Number:         3
+Classification:          Building Automation      
+Descriptor:              
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Point Address:           FLN:  3   Drop:  07  Point:  05
+Sensor Type:             Voltage
+Slope:                   1.0            Intercept:          0.0
+COV Limit:               1.0            Wire Resistance:    0.0
+Engineering Units:       DEG F
+Analog Representation:   Float
+# of decimal places:     2
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
