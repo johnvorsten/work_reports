@@ -12,7 +12,7 @@ import math
 # Third party imports
 
 # Local imports
-from flow_calculation.bernoulli_liquid_flow import (
+from calculators.bernoulli_liquid_flow import (
     calc_velocity_pressure,
     calc_velocity_pressure_standard_density,
     calc_velocity_pressure_conversion_constant,

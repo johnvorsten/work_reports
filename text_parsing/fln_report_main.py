@@ -11,7 +11,7 @@ import tkinter as tk
 from tkinter import filedialog
 
 # Local imports
-from text_parsing.fln_report import create_bln_dict, bln_dict_to_df
+from text_parsing.fln_report_parser import create_bln_dict, bln_dict_to_df
 
 # Declarations
 
