@@ -15,6 +15,7 @@ from text_parsing.fln_report_parser import create_bln_dict, bln_dict_to_df
 
 # Declarations
 
+
 def main():
 
     # Get system profile report from user
@@ -36,6 +37,7 @@ def main():
     subprocess.run('start EXCEL.exe "%s"' % save_path, shell=True)
 
     return None
+
 
 if __name__ == '__main__':
     main()
