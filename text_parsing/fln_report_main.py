@@ -9,11 +9,21 @@ import os
 import subprocess
 import tkinter as tk
 from tkinter import filedialog
+import sys
 
 # Local imports
 from text_parsing.fln_report_parser import create_bln_dict, bln_dict_to_df
 
 # Declarations
+DEFAULT_CSV_FILEOUT = 'fln_report'
+if sys.platform.__contains__('linux'):
+    DEFAULT_SAVE_DIR = os.getenv("HOME", None)
+elif sys.platform == 'win32':
+    DEFAULT_SAVE_DIR = os.getenv("USERPROFILE", None)
+elif sys.platform == 'darwin':
+    DEFAULT_SAVE_DIR = os.getenv("HOME", None)
+else:
+    DEFAULT_SAVE_DIR = None
 
 #%%
 
@@ -24,6 +34,16 @@ def main():
     root.withdraw()
     file_path = filedialog.askopenfilename()
     file_path = os.path.normpath(file_path)
+    # Ask user for save file path
+    save_path = filedialog.asksaveasfilename(
+        title="Save output file as",
+        initialdir=DEFAULT_SAVE_DIR,
+        initialfile=DEFAULT_CSV_FILEOUT,
+        filetypes=(('Comma separated value', '*.csv'),),
+        defaultextension='.csv')
+    if not save_path:
+        raise SystemExit(ValueError(str(save_path), ' is not a valid save path'))
+    save_path = os.path.normpath(save_path)
 
     # Create dictionary of BLN profile
     bln_dict = create_bln_dict(file_path)
@@ -34,6 +54,7 @@ def main():
     # Save dataframe to .csv file
     save_path = os.path.join(os.getcwd(), 'FLN_Schedule_output.csv')
     fln_dataframe.to_csv(save_path, index=False)
+
 
     subprocess.run('start EXCEL.exe "%s"' % save_path, shell=True)
 

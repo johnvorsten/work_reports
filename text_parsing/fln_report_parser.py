@@ -2,27 +2,26 @@
 """
 Created on Tue Sep 10 10:34:54 2019
 
-The text file report from commissioning tool has the following nested format :
+The text file report from commissioning tool has the following nested format:
 The report name is "system profile report" and export the report as a text file
 
-<Job Site:>
-<BLN:>
-    <Field Panel : (name, descriptor, node ID, etc)>
-        <FLN : (number, descriptor)>
-            <FLN Device : >
-                <Application : >
-                <Drop : >
-                    
-fln_dict = {'Job Site:':
-    {'BLN':
-        {'Field Panel:':
-            {'FLN:':
-                {'FLN Device:':
-                    {'Application':0, 'Drop':1}}}}}}
-    
-dev_dict = {'Application':0, 'Drop':0}
-fln_dict = {<fln_device_name>:dev_dict}
-field_dict = {<fln_number>:fln_dict, <instance>:instance}
+# Example
+{'CO0514AANODE21': # This is the name of a field panel
+    {'instance':'252100', # Instance number of a field panel
+    'FLN3': # FLN (field level network) name of a serial network
+        {
+            'CO0514_EF2412A_VFD': {'application': '65535 - Undefined or...FLN Device', 'drop': '252109'}, 
+            'CO0514_EF2412B_VFD': {'application': '65535 - Undefined or...FLN Device', 'drop': '252110'},
+        },
+    'FLN2':
+        {
+            'device_name': {'application': 'some name', 'drop':'12345'},
+            'another_device_name': {'application': 'some name', 'drop':'678'},
+        },
+    },
+    # [Etc...]
+}
+
 
 @author: z003vrzk
 """
@@ -38,8 +37,38 @@ import pandas as pd
 
 # %%
 
+# Example
+# {'CO0514AANODE21': # This is the name of a field panel
+#     {'instance':'252100', # Instance number of a field panel
+#     'FLN3': # FLN (field level network) name of a serial network
+#         {
+#             'CO0514_EF2412A_VFD': {'application': '65535 - Undefined or...FLN Device', 'drop': '252109'}, 
+#             'CO0514_EF2412B_VFD': {'application': '65535 - Undefined or...FLN Device', 'drop': '252110'},
+#         },
+#     'FLN2':
+#         {
+#             'device_name': {'application': 'some name', 'drop':'12345'},
+#             'another_device_name': {'application': 'some name', 'drop':'678'},
+#         },
+#     },
+#     # [Etc...]
+# }
 
-def create_bln_dict(file_path):
+bln_dict: dict = \
+    {str: {
+        'instance':str, 
+        str:{
+            str:{'application':str, 'drop':str},
+            str:{'application':str, 'drop':str},
+            # [etc...]
+        },
+        # [etc...]
+    },
+    # [etc...]
+    }
+
+
+def create_bln_dict(file_path: str):
     """Outputs a dictionary structure after iterating through all lines in an
     input text file. The output dict represents the network FLN structure
     of the text file. The text file is the "system profile" report
@@ -125,7 +154,7 @@ def create_bln_dict(file_path):
     return bln_dict
 
 
-def bln_dict_to_df(bln_dictionary):
+def bln_dict_to_df(bln_dictionary: dict):
     """ Outputs a pandas dataframe from a structured, nested hash table
     Inputs
     -------

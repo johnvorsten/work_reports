@@ -15,7 +15,7 @@ import sys
 from text_parsing.point_definition_parser import parse_text_to_list, write_dataclass_to_csv
 
 # Declarations
-DEFAULT_CSV_FILEOUT = 'point_definition_report'
+DEFAULT_CSV_FILEOUT = 'point_definition_report.csv'
 if sys.platform.__contains__('linux'):
     DEFAULT_SAVE_DIR = os.getenv("HOME", None)
 elif sys.platform == 'win32':
@@ -37,10 +37,10 @@ def main():
     # Ask user for save file path
     save_path = filedialog.asksaveasfilename(
         title="Save output file as",
-        initialdir=DEFAULT_SAVE_DIR,)
-        # initialfile=DEFAULT_CSV_FILEOUT,
-        # filetypes=('Comma separated value', 'csv'), 
-        # defaultextension='.csv')
+        initialdir=DEFAULT_SAVE_DIR,
+        initialfile=DEFAULT_CSV_FILEOUT,
+        filetypes=(('Comma separated value', '*.csv'),),
+        defaultextension='.csv')
     if not save_path:
         raise SystemExit(ValueError(str(save_path), ' is not a valid save path'))
     save_path = os.path.normpath(save_path)
