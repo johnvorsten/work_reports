@@ -2,7 +2,7 @@
 """
 Created on Tue Jan 21 09:15:43 2020
 
-@author: john vorsten
+@author: john Vorsten
 """
 # Python Imports
 import os
@@ -15,6 +15,7 @@ from text_parsing.fln_report_parser import create_bln_dict, bln_dict_to_df
 
 # Declarations
 
+#%%
 
 def main():
 

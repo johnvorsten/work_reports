@@ -23,10 +23,11 @@ other attributes are non-unique
 # %%
 # Python imports
 import re
-from dataclasses import dataclass, make_dataclass
+from dataclasses import dataclass, make_dataclass, asdict, fields
 from xml.sax.xmlreader import AttributesNSImpl
 from typing import List
 from io import TextIOBase, TextIOWrapper
+import csv
 
 # Third party imports
 import pandas as pd
@@ -54,18 +55,17 @@ ATTRIBUTES_FIELDS = ["point_system_name", "point_name", "point_type", "supervise
 # Matches start of line with any valid word character
 # including letter, number, underscore
 regex_start_with_valid_character = re.compile("^\w")
-
+# Dynamically create and compile regex based on ATTRIBUTES
+# These will be used to parse text line by line
+regex_searches = []
+for attribute_name in ATTRIBUTES:
+    reg = re.compile(attribute_name)
+    regex_searches.append(reg)
 
 class ProgrammerError(Exception):
     pass
 
 # %%
-
-# # Dynamically create PointDefinition dataclass from attributes
-# PointDefinition = make_dataclass(
-#     "PointDefinition",
-#     ATTRIBUTES_FIELDS)
-
 
 @dataclass
 class PointDefinition:
@@ -78,6 +78,10 @@ class PointDefinition:
     descriptor: str = ''
     panel_name: str = ''
     point_address: str = ''
+    slope: str = ''
+    cov_limit: str = ''
+    engineering_units: str = ''
+    analog_representation: str = ''
     text_table: str = ''
     initial_value: str = ''
     totalization: str = ''
@@ -96,15 +100,6 @@ class PointDefinition:
     default_destination_3: str = ''
     default_destination_4: str = ''
     alarm_mode: str = ''
-
-
-# Dynamically create and compile regex based on ATTRIBUTES
-# These will be used to parse text line by line
-regex_searches = []
-for attribute_name in ATTRIBUTES:
-    reg = re.compile(attribute_name)
-    regex_searches.append(reg)
-
 
 def _trim_and_strip_text(regex_match: re.Match, line: str) -> str:
     """Given a matched regex Match object and a line,
@@ -157,7 +152,6 @@ def _find_file_primary_key_start_lines(filepath: str) -> List[int]:
                 break
 
     return primary_key_offsets
-
 
 def _parse_text_from_offset_to_offset(file: TextIOWrapper, start: int, stop: int) -> PointDefinition:
 
@@ -222,7 +216,7 @@ def _parse_text_from_offset_to_offset(file: TextIOWrapper, start: int, stop: int
     if point:
         return point
     
-    raise ProgrammerError("whoopsies ", str(point))
+    raise ProgrammerError("whoopsies: ", str(point))
 
 def parse_text_to_list(filepath: str) -> List[PointDefinition]:
     """Using the pre-parsed offsets, iterate through text file"""
@@ -243,9 +237,21 @@ def parse_text_to_list(filepath: str) -> List[PointDefinition]:
 
     return points_list
 
-# %%
+def write_dataclass_to_csv(filepath: str, points: List[PointDefinition]) -> None:
 
-if __name__ == '__main__':
-    FILEPATH = '../tests/point_definition_test.txt'
-    points_list = parse_text_to_list(FILEPATH)
-    print(points_list)
+    # Get collection of keys from the PointDefinition dataclass for writing the header
+    keys: list = []
+    for field in fields(PointDefinition):
+        keys.append(field.name) # Name of field
+
+    with open(filepath, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(keys)
+        # Iterate through each points object and write
+        for point in points:
+            values = list(asdict(point).values())
+            writer.writerow(values)
+
+    return None
+
+# %%
