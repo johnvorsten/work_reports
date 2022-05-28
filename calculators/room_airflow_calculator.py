@@ -95,9 +95,6 @@ ax.grid(True)
 ax.legend()
 
 
-
-
-
 #%% Minimization and root finding
 
 from scipy.optimize import minimize
@@ -144,10 +141,6 @@ def integrated_error(x, *args):
     error_integral = trapz(abs(y_space_transferred_air_case2))
     
     return error_integral
-
-
-
-
 
 _Y_SUPPLY_MAX = 395
 _Y_SUPPLY_MIN = 120
