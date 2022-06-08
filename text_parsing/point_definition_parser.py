@@ -101,6 +101,7 @@ class PointDefinition:
     default_destination_4: str = ''
     alarm_mode: str = ''
 
+
 def _trim_and_strip_text(regex_match: re.Match, line: str) -> str:
     """Given a matched regex Match object and a line,
     strip the raw text of blank spaces, and return the value
@@ -112,11 +113,10 @@ def _trim_and_strip_text(regex_match: re.Match, line: str) -> str:
     Return B01.4307.FR7.STAEFA.COMFAIL
     """
     field_pos = regex_match.end()
-    field_name = line[field_pos:-1]  # Return string
-    field_name = field_name.strip(": ")  # Clean string of spaces
+    field_name = line[field_pos:]  # Return string
+    field_name = field_name.strip(": \n")  # Clean string of spaces
 
     return field_name
-
 
 def _find_file_primary_key_start_lines(filepath: str) -> List[int]:
 

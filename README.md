@@ -22,3 +22,6 @@ Scripts to parse unknown structured data (non-functional)
 
 ### acad printer
 Printing using autocad software (non-functional)
+
+### Testing
+python -m unittest tests
