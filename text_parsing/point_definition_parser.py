@@ -24,13 +24,11 @@ other attributes are non-unique
 # Python imports
 import re
 from dataclasses import dataclass, make_dataclass, asdict, fields
-from xml.sax.xmlreader import AttributesNSImpl
 from typing import List
 from io import TextIOBase, TextIOWrapper
 import csv
 
 # Third party imports
-import pandas as pd
 
 # Local imports
 
