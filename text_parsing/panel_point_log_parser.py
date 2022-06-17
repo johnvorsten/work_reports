@@ -58,7 +58,7 @@ computer which generate the report
 # %%
 # Python imports
 import re
-from dataclasses import dataclass
+from dataclasses import dataclass, fields, asdict
 from typing import List, Dict
 from io import TextIOBase, TextIOWrapper
 import csv
@@ -68,9 +68,9 @@ import csv
 # Local imports
 
 # Declarations
-HEADERS = ['Name:Suffix', 'Address','Description','Value/State','Status','Priority']
+HEADERS = ['Name:Suffix','Address','Description','Value/State','Status','Priority']
 # Note MOde Delay (min.) is different
-ATTRIBUTES_FIELDS = ['name', 'address','description','value','status','priority']
+ATTRIBUTES_FIELDS = ['name','address','description','value','status','priority']
 # Character position of start of each element of HEADERS within the report header line
 HEADERS_START: Dict[str, int] = {}
 for header in HEADERS:
@@ -78,7 +78,7 @@ for header in HEADERS:
 
 # Matches start of line with any valid word character
 # including letter, number, underscore
-regex_start_with_valid_character = re.compile("^\w")
+regex_start_with_valid_character = re.compile("^\w[^_]{2}")
 
 class ProgrammerError(Exception):
     pass
@@ -117,7 +117,7 @@ def _determine_header_start_positions(line: str) -> None:
 
     for header in HEADERS:
         if header in line:
-            HEADERS_START[header] = line.find(header, start=0, end=None)
+            HEADERS_START[header] = line.find(header, 0, None)
         else:
             raise ProgrammerError(f'{header} was expected within the header line {line}, but it was not found')
 
@@ -137,16 +137,16 @@ def _line_is_header(line: str) -> bool:
 
 def _line_is_list_end(line: str, previous_line: str) -> bool:
     """Determine if a line is the end of a list of points. 
-    Lists of points always end with a line of asterisks followed by a blank line"""
-    blank_line = ''
-    asterisk_line = '**********************************'
-
-    if line == blank_line and asterisk_line in previous_line:
+    Lists of points always end with a line of asterisks followed by a blank line
+    or end of line character"""
+    is_asterisk = _line_is_asterisk(previous_line)
+    is_blank = any((line == '', line == '\n'))
+    if all((is_asterisk, is_blank)):
         return True
 
     return False
 
-def _line_is_askerisk(line: str) -> bool:
+def _line_is_asterisk(line: str) -> bool:
     """Determine if a line is a series of asterisk characters"""
 
     asterisk_line = '**********************************'
@@ -159,19 +159,20 @@ def _parse_object_line(line: str, headers_start: Dict[str, int]) -> PointDefinit
     """Parse data attributes from a line. Data attributes start at the exact
     same position as their header"""
 
-    name: str = _trim_and_strip_text(line, headers_start['name'], headers_start['address'])
-    address: str = _trim_and_strip_text(line, headers_start['address'], headers_start['description'])
-    description: str = _trim_and_strip_text(line, headers_start['description'], headers_start['value'])
-    value: str = _trim_and_strip_text(line, headers_start['value'], headers_start['status'])
-    status: str = _trim_and_strip_text(line, headers_start['status'], headers_start['priority'])
-    priority: str = _trim_and_strip_text(line, headers_start['priority'], -1)
+    name: str = _trim_and_strip_text(line, headers_start['Name:Suffix'], headers_start['Address'])
+    address: str = _trim_and_strip_text(line, headers_start['Address'], headers_start['Description'])
+    description: str = _trim_and_strip_text(line, headers_start['Description'], headers_start['Value/State'])
+    value: str = _trim_and_strip_text(line, headers_start['Value/State'], headers_start['Status'])
+    status: str = _trim_and_strip_text(line, headers_start['Status'], headers_start['Priority'])
+    priority: str = _trim_and_strip_text(line, headers_start['Priority'], -1)
 
     point = PointDefinition(name, address, description, value, status, priority)
 
     return point
 
 def parse_text_to_pointdefinition_list(filepath: str) -> List[PointDefinition]:
-    """Iterate through a text file and parse good lines to a list of PointDefinition objects"""
+    """Iterate through a text file and parse good lines to a list of PointDefinition objects
+    See rules about how to determine which line is good"""
 
     points_list: List[PointDefinition] = []
     # First, find the first header line to populate data start positions
@@ -197,10 +198,48 @@ def parse_text_to_pointdefinition_list(filepath: str) -> List[PointDefinition]:
         file.seek(0, 2)  # End of strem
         end_location: int = file.tell()
         file.seek(0, 0)  # start of stream
+        # True if within object list area
+        in_list_area = False
+        previous_line: str = ''
 
         for line in file:
             if not regex_start_with_valid_character.search(line):
+                if in_list_area and _line_is_list_end(line, previous_line):
+                    in_list_area = False
+                previous_line = line
                 continue
-            if # TODO - left off
+            elif _line_is_header(line):
+                in_list_area = True
+                previous_line = line
+            elif _line_is_asterisk(line):
+                previous_line = line
+                continue
+            elif in_list_area:
+                # Lines are valid, not an asterisk line, not a header, and in list area
+                point = _parse_object_line(line, HEADERS_START)
+                points_list.append(point)
+                previous_line = line
 
     return points_list
+
+def write_dataclass_to_csv(filepath: str, points: List[PointDefinition]) -> None:
+    """"""
+
+    # Get collection of keys from the PointDefinition dataclass for writing the header
+    keys: list = []
+    for field in fields(PointDefinition):
+        keys.append(field.name) # Name of field
+
+    with open(filepath, 'w', newline='') as csvfile:
+        writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
+        writer.writerow(keys)
+        # Iterate through each points object and write
+        for point in points:
+            values = list(asdict(point).values())
+            writer.writerow(values)
+
+    return None
+
+if __name__ == '__main__':
+    FILEPATH = '../tests/point_log_report_test.txt'
+    parse_text_to_pointdefinition_list(FILEPATH)

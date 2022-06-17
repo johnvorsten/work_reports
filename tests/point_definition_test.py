@@ -1,6 +1,5 @@
 """Test module point_definition_parser.py"""
 # Python Imports
-from ctypes.wintypes import POINT
 from re import match
 import unittest
 import re
