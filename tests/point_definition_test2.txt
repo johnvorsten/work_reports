@@ -1,0 +1,89 @@
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
+ 
+********************************************************************************
+ 
+Point System Name:       B03.4429.DD01:PRI AIR VEL
+Point Name:              B03.4429.DD01:PRI AIR VEL
+Point Type:              LAI            
+Supervised:              No
+Revision Number:         3
+Classification:          Building Automation      
+Descriptor:              
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Auto Unbundled:          Yes
+Modified from Default:   No
+Point Address:           FLN:  2   Drop:  11  Point:  08
+Sensor Type:             L-Type
+Slope:                   1.0            Intercept:          0.0
+COV Limit:               1.0            Wire Resistance:    0.0
+Engineering Units:       CFM
+Analog Representation:   Float
+# of decimal places:     2
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
+ 
+********************************************************************************
+ 
+Point System Name:       B03.4429.DD01:PRI CLG VEL
+Point Name:              B03.4429.DD01:PRI CLG VEL
+Point Type:              LAO            
+Supervised:              No
+Revision Number:         9
+Classification:          Building Automation      
+Descriptor:              
+Panel Name:              B03.4331a.MBC01 (BASB04PR-25)
+Auto Unbundled:          Yes
+Modified from Default:   No
+Point Address:           FLN:  2   Drop:  11  Point:  50
+Slope:                   1.0            Intercept:          0.0
+COV Limit:               1.0            
+
+
+                                     - 373 -
+
+
+
+
+
+
+4/27/2022                   MD Anderson Cancer Center                   04:14 PM
+                  Point Definition Report ( Temporary Report ) 
+ 
+Selection:  B01.4307.FR7.STAEFA.COMFAIL, B01.4307.RF5.STAEFA.COMFAIL, ...
+(863 Points)
+________________________________________________________________________________
+Engineering Units:       CFM
+Analog Representation:   Float
+# of decimal places:     2
+Initial Value:           95.83
+Totalization:            None           Initial Priority:   NONE
+Enabled for RENO:        No
+Alarm Issue Management:  No             
+Graphic Name:            <Undefined>
+Informational Text:      << No Text Defined >>
+Alarm Type:              Not Alarmable
+ 
+********************************************************************************
+ 
+Point System Name:       B03.4429.DD01:PRI MIN VEL
+Point Name:              B03.4429.DD01:PRI MIN VEL
+Point Type:              LAO            
+Supervised:              No
+Revision Number:         11
+Classification:          Building Automation      
+Descriptor:              

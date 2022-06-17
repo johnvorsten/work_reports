@@ -18,6 +18,7 @@ from text_parsing.point_definition_parser import (
 
 # Declarations
 POINT_DEFINITION_FILEPATH = './tests/point_definition_test.txt'
+POINT_DEFINITION_FILEPATH2 = './tests/point_definition_test2.txt'
 SAVE_FILEPATH = './tests/point_definition_test.csv'
 TEST_TEXT = """
 4/27/2022
@@ -105,7 +106,16 @@ class TestPointDefinitionParser(unittest.TestCase):
         self.assertEqual(byte_offsets[0], 330)
         self.assertEqual(byte_offsets[1], 2330)
         self.assertListEqual(
-            byte_offsets, [330, 2330, 4330, 6329, 7299, 8650, 9524, 10775])
+            byte_offsets, [330, 2330, 4330, 6329, 7299, 8650, 9524, 10775, 11660])
+
+        return None
+
+    def test__find_file_primary_key_start_lines2(self):
+        """"""
+        byte_offsets: List[int] = _find_file_primary_key_start_lines(
+            POINT_DEFINITION_FILEPATH2)
+        self.assertListEqual(
+            byte_offsets, [672, 1731, 3149, 3430])
 
         return None
 

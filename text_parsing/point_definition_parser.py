@@ -27,6 +27,7 @@ from dataclasses import dataclass, make_dataclass, asdict, fields
 from typing import List
 from io import TextIOBase, TextIOWrapper
 import csv
+import os
 
 # Third party imports
 
@@ -52,12 +53,12 @@ ATTRIBUTES_FIELDS = ["point_system_name", "point_name", "point_type", "supervise
                      "default_destination_2", "default_destination_3", "default_destination_4", "alarm_mode"]
 # Matches start of line with any valid word character
 # including letter, number, underscore
-regex_start_with_valid_character = re.compile("^\w")
+regex_start_with_valid_character = re.compile(b"^\w")
 # Dynamically create and compile regex based on ATTRIBUTES
 # These will be used to parse text line by line
 regex_searches = []
 for attribute_name in ATTRIBUTES:
-    reg = re.compile(attribute_name)
+    reg = re.compile(bytes(attribute_name, encoding='UTF-8'))
     regex_searches.append(reg)
 
 class ProgrammerError(Exception):
@@ -100,7 +101,7 @@ class PointDefinition:
     alarm_mode: str = ''
 
 
-def _trim_and_strip_text(regex_match: re.Match, line: str) -> str:
+def _trim_and_strip_text(regex_match: re.Match, byte_line: bytes) -> str:
     """Given a matched regex Match object and a line,
     strip the raw text of blank spaces, and return the value
     Example:
@@ -110,9 +111,10 @@ def _trim_and_strip_text(regex_match: re.Match, line: str) -> str:
     and ending at character 18
     Return B01.4307.FR7.STAEFA.COMFAIL
     """
+    line = byte_line.decode(encoding='UTF-8')
     field_pos = regex_match.end()
     field_name = line[field_pos:]  # Return string
-    field_name = field_name.strip(": \n")  # Clean string of spaces
+    field_name = field_name.strip(": " + os.linesep)  # Clean string of spaces
 
     return field_name
 
@@ -121,9 +123,9 @@ def _find_file_primary_key_start_lines(filepath: str) -> List[int]:
     primary_key_offsets = []  # List of byte offsets
     offset: int = 0  # Byte offset location
     regex: re.Pattern = regex_searches[0]
-    line: str = ''
+    line: bytes = b''
 
-    with open(filepath, 'rt') as file:
+    with open(filepath, 'rb') as file:
         # Find end of file...
         file.seek(0, 2)  # End of strem
         end_location: int = file.tell()
@@ -132,9 +134,6 @@ def _find_file_primary_key_start_lines(filepath: str) -> List[int]:
         while file.readable():
 
             # Current offset will be beginning of next line
-            # TODO Return the current stream position as an opaque number.
-            # The number does not usually represent a number of bytes in the underlying binary storage.
-            # Does this mean tell() is not reliable to tell the current offset?
             current_byte_offset = file.tell()
             line = file.readline()
 
@@ -146,7 +145,9 @@ def _find_file_primary_key_start_lines(filepath: str) -> List[int]:
                 primary_key_offsets.append(current_byte_offset)
 
             # EOF occurs with blank string and no more bytes to read
-            if line == '' and file.tell() == end_location:
+            if line == b'' and file.tell() == end_location:
+                # Append end of file location
+                primary_key_offsets.append(file.tell())
                 break
 
     return primary_key_offsets
@@ -216,6 +217,67 @@ def _parse_text_from_offset_to_offset(file: TextIOWrapper, start: int, stop: int
     
     raise ProgrammerError("whoopsies: ", str(point))
 
+def _full_search_line(line: bytes, point: PointDefinition) -> None:
+    """Iterate through all regex search possibilities per line
+    If we match then continue reading lines and trying other regex per line
+    If we reach end of offset then stop searching
+    """
+
+    for idx in range(1, len(regex_searches)):
+        match = regex_searches[idx].search(line)
+        if match:
+            # Update the field for the current dataclass object
+            field_name = _trim_and_strip_text(match, line)
+            key = ATTRIBUTES_FIELDS[idx]
+            point.__setattr__(key, field_name)
+            # Match is found, do not keep searching current line
+            break
+
+    return None
+
+def _parse_text_from_offset_to_offset2(file: TextIOWrapper, start: int, stop: int) -> PointDefinition:
+
+    # Seek to start byte
+    file.seek(start)
+
+    # Instantiate to test if we failed to parse
+    point: PointDefinition = None
+
+    while file.readable() and file.tell() < stop:
+        # Manually iterate through lines
+        line: bytes = file.readline()
+
+        # First, search the line for text matching the primary key which is
+        # 'Point System Name:'
+        # If we find a line containing a primary key then attempt to create a new
+        # PointDefinition object
+        point_result = regex_searches[0].search(line)
+
+        # Each regex match object has useful attributes and methods
+        # re.match.end() : (int) position of end of string matched by match object
+        if point_result:
+            field_name = _trim_and_strip_text(point_result, line)
+            # Create a PointDefinition instance and append to list
+            point = PointDefinition(point_system_name=field_name)
+
+            # Continue to parse using the rest of the regex searches available
+            # If we exhaust our list of regex searches then we exit the for
+            # Loop and continue reading lines
+            line = file.readline()
+
+            # If the next line does not start with a word character, then skip it
+            while not regex_start_with_valid_character.search(line):
+                line = file.readline()
+
+            while file.tell() < stop:
+                _full_search_line(line, point)
+                line = file.readline()
+
+    if point:
+        return point
+    
+    raise ProgrammerError("whoopsies: ", str(point))
+
 def parse_text_to_list(filepath: str) -> List[PointDefinition]:
     """Using the pre-parsed offsets, iterate through text file"""
 
@@ -225,12 +287,12 @@ def parse_text_to_list(filepath: str) -> List[PointDefinition]:
     start: int
     stop: int
 
-    with open(filepath, 'rt') as file:
+    with open(filepath, 'rb') as file:
 
         for current_offset_index in range (0, len(offsets) - 1):
             start: int = offsets[current_offset_index]
             stop: int = offsets[current_offset_index+1]
-            point = _parse_text_from_offset_to_offset(file, start, stop)
+            point = _parse_text_from_offset_to_offset2(file, start, stop)
             points_list.append(point)
 
     return points_list
