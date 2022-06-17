@@ -239,7 +239,3 @@ def write_dataclass_to_csv(filepath: str, points: List[PointDefinition]) -> None
             writer.writerow(values)
 
     return None
-
-if __name__ == '__main__':
-    FILEPATH = '../tests/point_log_report_test.txt'
-    parse_text_to_pointdefinition_list(FILEPATH)
