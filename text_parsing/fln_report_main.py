@@ -12,7 +12,7 @@ from tkinter import filedialog
 import sys
 
 # Local imports
-from text_parsing.fln_report_parser import create_bln_dict, bln_dict_to_df
+from text_parsing.fln_report_parser import create_bln_dict, write_bln_dictionary_to_file
 
 # Declarations
 DEFAULT_CSV_FILEOUT = 'fln_report'
@@ -48,12 +48,9 @@ def main():
     # Create dictionary of BLN profile
     bln_dict = create_bln_dict(file_path)
 
-    # Convert dictionary of BLN profile to dataframe for report generation
-    fln_dataframe = bln_dict_to_df(bln_dict)
-
     # Save dataframe to .csv file
     save_path = os.path.join(os.getcwd(), 'FLN_Schedule_output.csv')
-    fln_dataframe.to_csv(save_path, index=False)
+    write_bln_dictionary_to_file(bln_dict, save_path)
 
 
     subprocess.run('start EXCEL.exe "%s"' % save_path, shell=True)

@@ -1,6 +1,9 @@
 # Folders
 **/__pycache__/**
 
+# Virtual environment
+venv/**
+
 # Excel files
 **FLN Schedule.csv
 **FLN_Schedule_output.csv
